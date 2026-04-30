@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./output.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -10,8 +11,17 @@
 
 <body>
     <header class="flex items-center justify-between max-w-[1200px] m-auto p-5 border-b border-b-[#A9D297]">
-        <img src="./manuimages/лого (1) 1.png" alt="">
-        <nav class="flex items-center gap-20">
+        <div class="lg:hidden">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#55A630" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </div>
+        <img src="./manuimages/лого (1) 1.png" class="lg:block hidden" alt="">
+        <img src="./manuimages/Лого.png" class="lg:hidden w-[50px] h-[50px]" alt="">
+        <nav class="hidden lg:flex items-center gap-20">
             <div class="flex items-center gap-5">
                 <img src="./manuimages/Иконка телефон.png" alt="">0 (800) 508-622
             </div>
@@ -21,8 +31,13 @@
                 <select name="" id=""></select>
             </div>
         </nav>
+        <div class="lg:hidden flex items-center gap-2 text-[#55A630] font-bold">
+            <img src="./manuimages/Иконка телефон.png" alt="" class="w-4 h-4">
+            <span class="text-xs">0 (800) 508-622</span>
+        </div>
     </header>
-    <header class="flex items-center justify-between text-[#424242] max-w-[1200px] p-5 m-auto">
+
+    <header class="hidden lg:flex items-center justify-between text-[#424242] max-w-[1200px] p-5 m-auto">
         <p>Курсы обучения</p>
         <p>Вебинары</p>
         <p>Видео-уроки</p>
@@ -33,48 +48,92 @@
         <p>Акции</p>
         <p>Магазин</p>
     </header>
-    <section class="flex flex-col max-w-[1200px] m-auto">
-        <h1 class="text-[35px] font-[600] uppercase text-center text-[#424242]">Видео-урок</h1>
-        <div class="flex justify-between flex-row mt-[70px] ">
-            <aside class="flex flex-col justify-between h-[416px]">
+
+    <section class="flex mt-[50px] lg:mt-[100px] flex-col max-w-[1200px] m-auto px-5">
+        <h1 class="text-[28px] lg:text-[35px] font-[600] uppercase text-center text-[#424242]">Видео-урок</h1>
+        <div class="flex flex-col lg:flex-row justify-between mt-[40px] lg:mt-[70px] gap-10">
+            <aside
+                class="flex flex-col justify-between lg:h-[416px] items-center lg:items-start text-center lg:text-left order-2 lg:order-1">
                 <div class="flex flex-col gap-[20px]">
                     <p class="text-[20px] text-[#55A630] dont-[500]">Спикер: Марина Спивак</p>
-                    <h1 class="text-[35px] font-[500] text-[#424242]">Как безопасно работать <br> в зоне носослезной
+                    <h1 class="text-[24px] lg:text-[35px] font-[500] text-[#424242]">Как безопасно работать <br
+                            class="hidden lg:block"> в зоне носослезной
                         борозды
-                        <br> канюлей?
+                        <br class="hidden lg:block"> канюлей?
                     </h1>
                 </div>
-                <div class="flex flex-col gap-[30px]">
+                <div class="flex flex-col gap-[30px] mt-6 lg:mt-0">
                     <p class="text-[20px] text-[#55A630]">Стоимость: 500 грн</p>
-                    <button class="w-[320px] h-[55px] bg-[#55A630] text-white text-[16px] font-semibold">Купить</button>
+                    <button
+                        class="w-[280px] lg:w-[320px] h-[55px] bg-[#55A630] text-white text-[16px] font-semibold">Купить</button>
                 </div>
             </aside>
-            <img src="./manuimages/Group 150.png" alt="">
-        </div>
-    </section>
-    <section class="flex flex-col max-w-[1200px] gap-[70px] m-auto">
-        <h1 class="text-[35px] font-semibold text-[#424242] text-center">Другие видео-уроки</h1>
-        <div class="flex flex-row justify-between">
-            <div class="flex flex-col gap-[30px] w-[487px] h-[551px]">
-                <img src="./manuimages/Group 137 1.png" alt="">
-                <p class="text-[20px] text-[#424242] leading-[20px]">Актуальна ли мезотерапия в коррекции <br> шеи,
-                    декольте, кистей рук и какие <br> существуют альтернативы?</p>
-                <button class="w-[320px] h-[55px] bg-[#55A630] text-[white] font-semibold text-[18px]">Купить</button>
-            </div>
-            <div class="flex flex-col gap-[30px] w-[487px] h-[551px]">
-                <img src="./manuimages/Group 137 1.png" alt="">
-                <p class="text-[20px] text-[#424242] leading-[20px]">Актуальна ли мезотерапия в коррекции <br> шеи,
-                    декольте, кистей рук и какие <br> существуют альтернативы?</p>
-                <button class="w-[320px] h-[55px] bg-[#55A630] text-[white] font-semibold text-[18px]">Купить</button>
+            <div class="order-1 lg:order-2 flex justify-center">
+                <img src="./manuimages/Group 150.png" alt="" class="max-w-full">
             </div>
         </div>
-        <div class="flex flex-col gap-[30px] w-[487px] h-[551px]">
-                <img src="./manuimages/Group 137 1.png" alt="">
-                <p class="text-[20px] text-[#424242] leading-[20px]">Актуальна ли мезотерапия в коррекции <br> шеи,
-                    декольте, кистей рук и какие <br> существуют альтернативы?</p>
-                <button class="w-[320px] h-[55px] bg-[#55A630] text-[white] font-semibold text-[18px]">Купить</button>
-            </div>
     </section>
+
+    <section class="flex mt-[80px] lg:mt-[140px] flex-col max-w-[1200px] gap-[40px] lg:gap-[70px] m-auto px-5">
+        <h1 class="text-[28px] lg:text-[35px] font-semibold text-[#424242] text-center">Другие видео-уроки</h1>
+
+        <div class="flex flex-col lg:flex-row justify-between gap-10">
+            <div class="flex flex-col gap-[20px] lg:gap-[30px] w-full lg:w-[487px] items-center lg:items-start">
+                <img src="./manuimages/Group 137 1.png" alt="" class="w-full">
+                <p class="text-[18px] lg:text-[20px] text-[#424242] text-center lg:text-left leading-tight">Актуальна ли
+                    мезотерапия в коррекции шеи,
+                    декольте, кистей рук и какие существуют альтернативы?</p>
+                <button
+                    class="w-[280px] lg:w-[320px] h-[55px] bg-[#55A630] text-[white] font-semibold text-[18px]">Купить</button>
+            </div>
+            <div class="flex flex-col gap-[20px] lg:gap-[30px] w-full lg:w-[487px] items-center lg:items-start">
+                <img src="./manuimages/Group 137 1.png" alt="" class="w-full">
+                <p class="text-[18px] lg:text-[20px] text-[#424242] text-center lg:text-left leading-tight">Актуальна ли
+                    мезотерапия в коррекции шеи,
+                    декольте, кистей рук и какие существуют альтернативы?</p>
+                <button
+                    class="w-[280px] lg:w-[320px] h-[55px] bg-[#55A630] text-[white] font-semibold text-[18px]">Купить</button>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-[20px] lg:gap-[30px] w-full lg:w-[487px] items-center lg:items-start">
+            <img src="./manuimages/Group 137 1.png" alt="" class="w-full">
+            <p class="text-[18px] lg:text-[20px] text-[#424242] text-center lg:text-left leading-tight">Актуальна ли
+                мезотерапия в коррекции шеи,
+                декольте, кистей рук и какие существуют альтернативы?</p>
+            <button
+                class="w-[280px] lg:w-[320px] h-[55px] bg-[#55A630] text-[white] font-semibold text-[18px]">Купить</button>
+        </div>
+    </section>
+
+    <footer class="flex flex-col lg:flex-row mt-[100px] bg-[#424242]">
+        <div class="w-full lg:w-auto order-2 lg:order-1">
+            <img src="./manuimages/image 21.png" alt="" class="w-full object-cover">
+        </div>
+        <aside
+            class="flex flex-col items-center lg:items-start justify-between p-10 lg:ml-[50px] lg:mt-[40px] order-1 lg:order-2">
+            <img src="./manuimages/Лого.png" alt="">
+            <p class="text-[26px] lg:text-[30px] font-bold text-white mt-4">0 (800) 508-622</p>
+            <p class="text-[20px] lg:text-[25px] font-semibold text-white">Харьков, Клочковская, д. 3</p>
+            <div
+                class="grid grid-cols-2 gap-x-10 text-white font-[500] leading-10 text-[16px] lg:text-[18px] mt-6 text-center lg:text-left">
+                <p>Курсы обучения</p>
+                <p>Акции</p>
+                <p>Вебинары</p>
+                <p>О нас</p>
+                <p>Видео-уроки</p>
+                <p>Блог</p>
+                <p>Прайс</p>
+                <p>Магазин</p>
+                <p class="col-span-2 lg:col-span-1">Рассписание</p>
+            </div>
+            <div class="flex flex-row gap-[50px] mt-6">
+                <img src="./manuimages/Vector.png" alt="">
+                <img src="./manuimages/Vector-1.png" alt="">
+            </div>
+            <p class="text-[16px] lg:text-[18px] text-white mt-10 mb-[30px]">Политика конфиденциальности</p>
+        </aside>
+    </footer>
 </body>
 
 </html>
